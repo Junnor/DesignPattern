@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let _ = IPhoneFactory.createPhone()
+        let _ = AppleFactory.createPhone()
     }
     
 }

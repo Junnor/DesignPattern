@@ -17,9 +17,9 @@ protocol Factory {
     static func createPhone() -> Phone
 }
 
-struct IPhoneFactory: Factory {
+struct AppleFactory: Factory {
     static func createPhone() -> Phone {
-        let product = IPhoneProduct()
+        let product = ApplePhone()
         product.create()
         return product
     }
@@ -27,7 +27,7 @@ struct IPhoneFactory: Factory {
 
 struct XiaoMiFactory: Factory {
     static func createPhone() -> Phone {
-        let product = XiaomiProduct()
+        let product = XiaomiPhone()
         product.create()
         return product
     }
@@ -35,7 +35,7 @@ struct XiaoMiFactory: Factory {
 
 struct HuaWeiFactory: Factory {
     static func createPhone() -> Phone {
-        let product = HuaWeiProduct()
+        let product = HuaWeiPhone()
         product.create()
         return product
     }

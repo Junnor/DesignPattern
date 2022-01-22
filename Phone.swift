@@ -12,19 +12,19 @@ protocol Phone {
 }
 
 
-class IPhoneProduct: Phone {
+class ApplePhone: Phone {
     func create() {
         print("Created iPhone")
     }
 }
 
-class XiaomiProduct: Phone {
+class XiaomiPhone: Phone {
     func create() {
         print("Created XiaoMi")
     }
 }
 
-class HuaWeiProduct: Phone {
+class HuaWeiPhone: Phone {
     func create() {
         print("Created HuaWei")
     }
