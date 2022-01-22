@@ -12,8 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let product = Factory.createPhone(type: .XiaoMi)
-        product.create()
+        let _ = Factory.createPhone(type: .XiaoMi)
     }
     
 }

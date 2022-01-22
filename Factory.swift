@@ -13,16 +13,24 @@ enum PhoneType {
     case HuaWei
 }
 
+// 实际使用有 NSNumber 等类蔟
+
 struct Factory {
     
     static func createPhone(type: PhoneType) -> Phone {
         switch type {
         case .iPhone:
-            return AppleProduct()
+            let phone = ApplePhone()
+            phone.create()
+            return phone
         case .XiaoMi:
-            return XiaomiProduct()
+            let phone = XiaomiPhone()
+            phone.create()
+            return phone
         case .HuaWei:
-            return HuaWeiProduct()
+            let phone = HuaWeiPhone()
+            phone.create()
+            return phone
         }
     }
     
