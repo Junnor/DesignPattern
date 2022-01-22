@@ -13,17 +13,30 @@ enum PhoneType {
     case HuaWei
 }
 
-struct Factory {
-    
-    static func createPhone(type: PhoneType) -> Phone {
-        switch type {
-        case .iPhone:
-            return IPhoneProduct()
-        case .XiaoMi:
-            return XiaomiProduct()
-        case .HuaWei:
-            return HuaWeiProduct()
-        }
+protocol Factory {
+    static func createPhone() -> Phone
+}
+
+struct IPhoneFactory: Factory {
+    static func createPhone() -> Phone {
+        let product = IPhoneProduct()
+        product.create()
+        return product
     }
-    
+}
+
+struct XiaoMiFactory: Factory {
+    static func createPhone() -> Phone {
+        let product = XiaomiProduct()
+        product.create()
+        return product
+    }
+}
+
+struct HuaWeiFactory: Factory {
+    static func createPhone() -> Phone {
+        let product = HuaWeiProduct()
+        product.create()
+        return product
+    }
 }
