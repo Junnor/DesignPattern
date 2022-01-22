@@ -18,7 +18,7 @@ struct Factory {
     static func createPhone(type: PhoneType) -> Phone {
         switch type {
         case .iPhone:
-            return IPhoneProduct()
+            return AppleProduct()
         case .XiaoMi:
             return XiaomiProduct()
         case .HuaWei:

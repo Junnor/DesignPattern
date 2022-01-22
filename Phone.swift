@@ -12,7 +12,7 @@ protocol Phone {
 }
 
 
-class IPhoneProduct: Phone {
+class AppleProduct: Phone {
     func create() {
         print("Created iPhone")
     }
