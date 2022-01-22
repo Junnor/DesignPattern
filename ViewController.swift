@@ -12,6 +12,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let builder = XiaoMiBuilder()
+        let director = Director()
+        director.constructPhoneWithBuilder(builder)
+        print(director.obtainPhone)
+        
     }
 
 
