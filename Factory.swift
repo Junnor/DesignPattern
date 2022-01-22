@@ -7,19 +7,21 @@
 
 import UIKit
 
-enum PhoneType {
-    case iPhone
-    case XiaoMi
-    case HuaWei
-}
-
 protocol Factory {
     static func createPhone() -> Phone
+    static func createComputer() -> Computer
 }
 
-struct IPhoneFactory: Factory {
+struct AppleFactory: Factory {
+    
     static func createPhone() -> Phone {
-        let product = IPhoneProduct()
+        let product = ApplePhone()
+        product.create()
+        return product
+    }
+    
+    static func createComputer() -> Computer {
+        let product = AppleComputer()
         product.create()
         return product
     }
@@ -27,16 +29,31 @@ struct IPhoneFactory: Factory {
 
 struct XiaoMiFactory: Factory {
     static func createPhone() -> Phone {
-        let product = XiaomiProduct()
+        let product = XiaomiPhone()
         product.create()
         return product
     }
+    
+    static func createComputer() -> Computer {
+        let product = XiaomiComputer()
+        product.create()
+        return product
+    }
+
 }
 
 struct HuaWeiFactory: Factory {
+    
     static func createPhone() -> Phone {
-        let product = HuaWeiProduct()
+        let product = HuaWeiPhone()
         product.create()
         return product
     }
+    
+    static func createComputer() -> Computer {
+        let product = HuaWeiComputer()
+        product.create()
+        return product
+    }
+
 }
