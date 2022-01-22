@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         jerry.age = 3
         print("0-----jerry info: \(jerry)")
         print("new-----tom info: \(tom)")
-
     }
 
 
